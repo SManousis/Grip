@@ -1,10 +1,13 @@
-.tr{ 
+.container{
+
+    display: flex;
+}
+
+.cells{
+    flex-direction: row;
     width: 50px;
     height: 25px;   
-    background: black;
-}
-.td{
-    width: 50px;
-    height: 25px;
+    border: 2px;
+    
     background: black;
 }
