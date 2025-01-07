@@ -10,7 +10,7 @@ function makeGrid(size) {
     for (let i = 0; i < size * size; i++) {
         let cell = document.createElement("div");
         cell.classList.add("cell");
-        cell.style.opacity = 0; // Initialize opacity to 0
+        cell.style.opacity = 0.1; // Initialize opacity to 0
         cell.addEventListener("mouseover", () => raiseOpacity(cell)); // Attach event listener
         container.appendChild(cell);
     }
@@ -25,6 +25,7 @@ function makeGrid(size) {
 
 const raiseOpacity = (cell) => {
     const currentOpacity = parseFloat(cell.style.opacity);
+    
     if (currentOpacity < 1) {
         cell.style.opacity = currentOpacity + 0.1; // Increment opacity
     }
